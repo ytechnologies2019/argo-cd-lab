@@ -24,3 +24,19 @@ spec:
         - name: nginx-index-volume
           configMap:
             name: nginx-index-html
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: debug
+  name: debug
+spec:
+  containers:
+  - image: thihathura/test-container
+    name: debug
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
