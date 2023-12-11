@@ -4,4 +4,4 @@ metadata:
   name: nginx-index-html
 data:
   index.html: |
-    It's working on V1.0
+    It's working on V2.0
