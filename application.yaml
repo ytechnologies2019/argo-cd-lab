@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1 
 kind: Application
 metadata:
-  name: web-app    #NAME
+  name: web-app           #NAME
 spec:
   project: default        #DEFAULT
   source:
-    repoURL: https://github.com/ytechnologies2019/y-technologies-kubernetes-web-admin-portal-and-db.git  #PULL FROM GIT
+    repoURL: https://github.com/ytechnologies2019/argo-cd-lab.git    #PULL FROM GIT
     targetRevision: HEAD                      #watch the latest update
-    path: user-web-deployment                 #Working Folder in GIT
+    path: deployment                           #Working Folder in GIT
   destination:
     server: https://kubernetes.default.svc    #Cluster Name
-    namespace: dmz                            #NameSpace
+    namespace: web                            #NameSpace
